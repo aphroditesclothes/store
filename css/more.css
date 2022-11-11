@@ -1,0 +1,242 @@
+@font-face {
+    font-family: 'WulkanDisplay';
+    src: url(../fonts/WulkanDisplayRegular.ttf);
+}
+
+@font-face {
+    font-family: 'WulkanDisplayBold';
+    src: url(../fonts/WulkanDisplayBold.ttf);
+}
+
+@font-face {
+    font-family: 'XanhMono';
+    src: url(../fonts/XanhMono-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar{
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    
+    position: sticky;
+    z-index: 999;
+
+    top: 0;
+    left: 0;
+}
+
+.home{
+    text-transform: uppercase;
+    color: #383838;
+    font-family: 'WulkanDisplayBold', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav li{
+    list-style: none;
+    padding: 0 10px;
+    font-family: 'XanhMono', sans-serif;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.nav li a{
+    color: #383838;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.1s ease;
+}
+
+.nav li a:hover,
+.nav li a.active{
+    color: #2ec494;
+}
+
+.nav li a:hover::after,
+.nav li a.active::after{
+    content: "";
+    background: #2ec494;
+    position: absolute;
+    width: 30%;
+    height: 2px;
+    bottom: 0;
+    left: 10px;
+}
+
+.hero{
+    width: 100%;
+    height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    background-image: url(../img/header.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top 25% right 0;
+    
+    margin-bottom: 100px;
+}
+
+.hero h1{
+    color: #fff;
+    font-family: 'WulkanDisplayBold', sans-serif;
+    font-size: 60px;
+}
+
+.hero h2{
+    color: rgb(227, 221, 221);
+    font-family: 'WulkanDisplay', sans-serif;
+    padding: 10px 0;
+}
+
+.content1{
+    padding: 0 30px;
+    display: flex;
+}
+
+.content1 img{
+    padding: 0 30px 30px 30px;
+    width: 90vh;
+    height: 70vh;
+    object-fit: cover;
+}
+
+.content1 h2{
+    font-family: 'WulkanDisplayBold', sans-serif;
+    text-transform: uppercase;
+    font-size: 40px;
+    padding-bottom: 10px;
+}
+
+.content1 p{
+    line-height: 1.5;
+    text-align: justify;
+    font-size: 20px;
+}
+
+.content1 strong{
+    font-family: 'WulkanDisplayBold', sans-serif;
+}
+
+.content2{
+    width: 100%;
+    padding: 100px 30px 20px 30px;
+}
+
+.content2 img{
+    width: 100%;
+    height: 90vh;
+}
+
+.content3{
+    padding: 30px;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 100px;
+}
+
+.content3 h1{
+    margin-bottom: 20px;
+    font-family: 'WulkanDisplayBold', sans-serif;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.about-us{
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+}
+
+.about-us p{
+    line-height: 1.8;
+    font-size: 17px;
+}
+.about-us a{
+    text-decoration: none;
+    color: #383838;
+    font-family: 'WulkanDisplayBold', sans-serif;
+}
+
+.footer{
+    padding: 40px 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: #efeeee;
+}
+
+.footer .logo{
+    width: 250px;
+    height: 100%;
+    margin-bottom: 10px;
+}
+
+.footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.footer .col h4{
+    font-family: 'WulkanDisplayBold', sans-serif;
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.footer .col p{
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.footer .col .follow{
+    margin-top: 20px;
+}
+
+.footer .col .follow i{
+    color: #606063;
+    margin: 10px 20px 0 0;
+    cursor: pointer;
+}
+
+.footer .col .follow i:hover{
+    color: #383838;
+}
+
+.footer strong{
+    color: #383838;
+}
+
+.footer .col p{
+    margin: 0 0 10px 0;
+    color: #606063;
+}
+
+.footer .install img{
+    margin: 10px 0 15px 0;
+}
+
+.footer .install .row img{
+    border: 1px solid #088178;
+    border-radius: 5px;
+    cursor: pointer;
+}

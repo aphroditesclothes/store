@@ -1,0 +1,450 @@
+@font-face {
+    font-family: 'XanhMono';
+    src: url(../fonts/XanhMono-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'XanhItalic';
+    src: url(../fonts/XanhMono-Italic.ttf);
+}
+
+@font-face {
+    font-family: 'WulkanDisplay';
+    src: url(../fonts/WulkanDisplayRegular.ttf);
+}
+
+@font-face {
+    font-family: 'WulkanDisplayBold';
+    src: url(../fonts/WulkanDisplayBold.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'XanhMono', sans-serif; */
+}
+
+.opening{
+    display: flex;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 8px 0;
+    font-size: 7px;
+    background: #3ca685;
+    color: #fff;
+}
+
+/* .navbar{
+    background-image: url('../img/header1.jpeg');
+    background-size: cover;
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-position: top 25% right 0;
+} */
+
+.navbar{
+    position: relative;
+    width: 100%;
+    height: 95vh;
+}
+
+.navbar::before{
+    content: "";
+    background-image: url('../img/clothing2.jpg');
+    position: absolute;
+    background-size: cover;
+    background-position: top 50% right 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    opacity: 0.9;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 70px;
+    position: relative;
+}
+
+.header .logo{
+    width: 100%;
+    height: 30vh;
+}
+
+.header .items{
+    display: flex;
+    justify-content: center;
+    font-family: 'XanhMono', sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.header .items li{
+    padding: 100px 10px;
+    list-style: none;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.header .items li a{
+    color: #fff;
+    text-decoration: none;
+    transition: 0.15s ease;
+}
+
+.items li a:hover{
+    color: #2ec494;
+}
+
+.items li a.active::after,
+.items li a:hover::after{
+    content: "";
+    background: #2ec494;
+    width: 40%;
+    height: 2px;
+    position: absolute;
+    left: 10px;
+    top: 125px;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    padding: 30px 0;
+    position: relative;
+}
+
+.content h1{
+    font-size: 80px;
+    padding: 10px 0;
+    font-weight: 600;
+    font-family: 'WulkanDisplayBold', sans-serif;
+    color: #2ec494;
+    text-transform: capitalize;
+}
+
+.content h2{
+    font-weight: 600;
+    font-size: 45px;
+    font-family: 'WulkanDisplayBold', sans-serif;
+    color: black;
+}
+
+.content h3{
+    padding: 10px 0;
+    font-size: 25px;
+    font-family: 'WulkanDisplay', sans-serif;
+    color: black;
+}
+
+.content button{
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 8px 20px;
+    margin-top: 10px;
+    background-color: #fff;
+    border: none;
+    transition: 0.2s ease;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+}
+
+.content button:hover{
+    background-color: #2ec494;
+    color: #fff;
+}
+
+/* .pros h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    font-size: 35px;
+    padding: 30px 0;
+    font-weight: 900;
+    font-family: 'XanhMono', sans-serif;
+}
+
+.pros-container{
+    padding: 10px 80px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    align-items: center;
+}
+
+.container{
+    text-align: center;
+    padding: 10px 100px;
+}
+
+.container i{
+    font-size: 45px;
+}
+
+.container h3{
+    font-weight: 600;
+    color: black;
+    font-size: 30px;
+    padding: 10px 0;
+    font-family: 'XanhItalic', sans-serif;
+}
+
+.container p{
+    font-size: 18px;
+    font-weight: 300;
+} */
+
+.pros{
+    padding: 40px 0;
+}
+
+.heading{
+    font-size: 30px;
+    font-family: 'WulkanDisplayBold', sans-serif;
+    line-height: 50px;
+    text-transform: capitalize;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.pros-container{
+    margin: auto;
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.pros-container .box-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box img{
+    width: 60px;
+    padding: 0 5px;
+    margin-left: 10px;
+
+}
+
+.desc{
+    padding: 15px 0px 15px 35px;
+}
+
+.desc h3{
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-family: 'WulkanDisplayBold', sans-serif;
+}
+
+.desc p{
+    font-family: 'arial', sans-serif;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.explore{
+    width: 100%;
+    padding: 45px 0;
+}
+
+.explore_content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 70px 0;
+    background-image: url("https://cdn.rtrcdn.com/sites/default/files/assets/2020/ProductPortfolio/Background_Molecule_GatedPage.png");
+    background-repeat: no-repeat;
+    background-position-y: -290px;
+}
+
+.explore_content h1{
+    font-family: 'WulkanDisplayBold', sans-serif;
+    font-size: 40px;
+}
+
+.explore_content p{
+    padding: 20px;
+    font-size: 20px;
+}
+
+.explore_content button{
+    font-size: 15px;
+    padding: 10px 20px;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    background: black;
+    cursor: pointer;
+}
+
+.explore_content button:hover{
+    opacity: 0.7;
+}
+
+.comm{
+    position: relative;
+    overflow: hidden;
+    padding: 40px 0;
+}
+
+.comm-head{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-family: 'WulkanDisplayBold', sans-serif;
+    margin-bottom: 80px;
+}
+
+.comm-container{
+    display: flex;
+    padding: 0 10vw;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.comm-card{
+    flex: 0 0 auto;
+    width: 350px;
+    height: 460px;
+    margin-right: 40px;
+}
+
+.comm-image{
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+}
+
+.comm-thumb{
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+}
+
+.pre-button,
+.nxt-button{
+    border: none;
+    width: 10vw;
+    height: 450px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0), #fff 100%);
+    cursor: pointer;
+    z-index: 8;
+}
+
+.pre-button{
+    left: 0;
+    transform: rotate(180deg);
+}
+
+.nxt-button{
+    right: 0;
+}
+
+.pre-button img,
+.nxt-button img{
+    opacity: 0.2;
+}
+
+.pre-button:hover img,
+.nxt-button:hover img{
+    opacity: 1;
+}
+
+.comm-card span{
+    width: 350px;
+    height: 450px;
+    padding: 0 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #204c47;
+    font-family: 'WulkanDisplay', sans-serif;
+    font-size: 30px;
+    line-height: 1.5;
+    color: #fff;
+}
+
+.new-commers{
+    padding: 60px 0;
+    width: 100%;
+}
+
+.members{
+    background-image: url('https://cdn.rtrcdn.com/assets/imgs/02022022_AnonGatedHP_NCOBanner_Mobile.jpg');
+    color: #fff;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 40px 0 0 0;
+}
+
+.members h1{
+    font-family: 'WulkanDisplay', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+}
+
+.members p{
+    font-family: 'WulkanDisplayBold', sans-serif;
+    font-size: 30px;
+}
+
+.members strong{
+    color: rgb(243, 181, 25);
+}
+
+.members button{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-family: 'arial', sans-serif;
+    font-weight: 300;
+    padding: 10px 30px;
+    border: none;
+    background: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.1s ease;
+}
+
+.members button:hover{
+    background-color: black;
+    color: #fff;
+}
+
+.copyright{
+    text-align: center;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.cr-img img{
+    width: 55px;
+    height: 100%;
+    padding-bottom: 10px;
+}
+
+.cr-context{
+    font-family: 'XanhMono', sans-serif;
+    opacity: 0.7;
+}

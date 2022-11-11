@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'WulkanDisplay';
+    src: url(../fonts/WulkanDisplayRegular.ttf);
+}
+
+@font-face {
+    font-family: 'WulkanDisplayBold';
+    src: url(../fonts/WulkanDisplayBold.ttf);
+}
+
+body{
+    background-image: url(../img/clothing4.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    color: #fff;
+}
+
+.loader{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    display: none;
+}
+
+.container{
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px 50px;
+    border-radius: 5px;
+}
+
+.open h1{
+    text-align: center;
+    display: block;
+    padding: 20px 0;
+    font-family: 'WulkanDisplayBold', sans-serif;
+    text-transform: uppercase;
+}
+
+#user, #email,
+#password{
+    display: block;
+    width: 300px;
+    height: 50px;
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    background: #fff;
+    margin-bottom: 20px;
+    outline: none;
+    font-size: 14px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.01);
+}
+
+.sign-up p{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'WulkanDisplay', sans-serif;
+    padding-bottom: 20px;
+}
+
+.platform{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px 20px 40px;
+    margin: 0 10px 0 10px;
+    font-size: 20px;
+}
+  
+.platform a{
+    color: #383838;
+    border: none;
+    background: #fff;
+    width: 40px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    transition: 0.1s ease;
+}
+  
+.platform a:hover{
+    background: #383838;
+    color: #fff;
+}
+
+.create{
+    text-align: center;
+    padding: 20px 0;
+}
+
+.create button{
+    padding: 10px 30px;
+    font-size: 20px;
+    font-family: 'WulkanDisplay', sans-serif;
+    text-transform: capitalize;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: 0.1s ease;
+    background: #fff;
+}
+
+.create button:hover{
+    background: #383838;
+    color: #fff;
+}

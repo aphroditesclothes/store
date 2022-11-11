@@ -1,0 +1,267 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'WulkanDisplay';
+    src: url(../fonts/WulkanDisplayRegular.ttf);
+}
+
+@font-face {
+    font-family: 'WulkanDisplayBold';
+    src: url(../fonts/WulkanDisplayBold.ttf);
+}
+
+@font-face {
+    font-family: 'XanhMono';
+    src: url(../fonts/XanhMono-Regular.ttf);
+}
+
+.navbar{
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    
+    position: sticky;
+    z-index: 999;
+
+    top: 0;
+    left: 0;
+}
+
+.home{
+    text-transform: uppercase;
+    color: #383838;
+    font-family: 'WulkanDisplayBold', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav li{
+    list-style: none;
+    padding: 0 10px;
+    font-family: 'XanhMono', sans-serif;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.nav li a{
+    color: #383838;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.1s ease;
+}
+
+.nav li a:hover,
+.nav li a.active{
+    color: #2ec494;
+}
+
+.nav li a:hover::after,
+.nav li a.active::after{
+    content: "";
+    background: #2ec494;
+    position: absolute;
+    width: 30%;
+    height: 2px;
+    bottom: 0;
+    left: 10px;
+}
+
+.footer{
+    padding: 40px 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: #efeeee;
+    /* position: absolute; */
+
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.footer .logo{
+    width: 250px;
+    height: 100%;
+    margin-bottom: 10px;
+}
+
+.footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.footer .col h4{
+    font-family: 'WulkanDisplayBold', sans-serif;
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.footer .col p{
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.footer .col .follow{
+    margin-top: 20px;
+}
+
+.footer .col .follow i{
+    color: #606063;
+    margin: 10px 20px 0 0;
+    cursor: pointer;
+}
+
+.footer .col .follow i:hover{
+    color: #383838;
+}
+
+.footer strong{
+    color: #383838;
+}
+
+.footer .col p{
+    margin: 0 0 10px 0;
+    color: #606063;
+}
+
+.footer .install img{
+    margin: 10px 0 15px 0;
+}
+
+.footer .install .row img{
+    border: 1px solid #088178;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hero{
+    width: 100%;
+    height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    background-image: url('https://katiecouric.com/wp-content/uploads/2022/09/best_clothing_rental_options-scaled.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top 10% right 0;
+
+    margin-bottom: 100px;
+}
+
+.hero h1{
+    font-family: 'WulkanDisplayBold', sans-serif;
+    font-size: 60px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.hero h2{
+    color: #fff;
+    opacity: 0.8;
+    font-family: 'WulkanDisplay', sans-serif;
+    padding: 10px 0;
+    text-transform: capitalize;
+}
+
+.rental{
+    padding: 30px 0 30px 60px;
+    margin: 0 50px 50px 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.desc{
+    text-align: justify;
+}
+
+.desc h1{
+    font-family: 'WulkanDisplayBold';
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    font-size: 40px;
+}
+
+.desc p{
+    font-size: 20px;
+    line-height: 1.5;
+    padding-right: 80px;
+}
+
+.rent-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.rent-card{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 80vh;
+}
+
+.rent-image img{
+    width: 450px;
+    height: 100%;
+    padding-right: 15px;
+    object-fit: cover;
+    border-radius: 40px;
+}
+
+.desc a{
+    text-decoration: none;
+    color: #383838;
+    font-family: 'WulkanDisplayBold', sans-serif;
+}
+
+.sell{
+    width: 100%;
+    padding: 0 50px 50px 50px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.sell-image{
+    padding: 0 30px;
+}
+
+.sell-image img{
+    border-radius: 40px;
+}
+
+.sell-text h1{
+    font-family: 'WulkanDisplayBold', sans-serif;
+    text-transform: uppercase;
+    font-size: 40px;
+    padding-bottom: 40px;
+    text-align: justify;
+}
+
+.sell-text p{
+    text-align: justify;
+    font-size: 20px;
+    line-height: 1.5;
+}
+.sell-text a{
+    color: #383838;
+    text-decoration: none;
+    font-family: 'WulkanDisplayBold', sans-serif;
+}
