@@ -78,5 +78,5 @@ function updateTotal(){
     }
     
     document.getElementsByClassName('total-price')[0].innerHTML = total + ".000 VND"
-    document.getElementsByClassName('subtotal')[0].innerHTML = total + ".000 VND"
+    document.getElementsByClassName('subtotal')[0].innerHTML = total  + ".000 VND"
 }
