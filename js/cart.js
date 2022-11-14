@@ -20,12 +20,12 @@ function ready(){
         input.addEventListener('change', quantityChanged)
     }
 
-    var addToCart = document.getElementsByClassName('add-to-cart')
+    // var addToCart = document.getElementsByClassName('cart');
 
-    for (var i = 0; i < addToCart.length; i++){
-        var button = addToCart[i]
-        button.addEventListener('click', addToCartClicked)
-    }
+    // for (var i = 0; i < addToCart.length; i++){
+    //     var button = addToCart[i];
+    //     button.addEventListener('click', addToCartClicked);
+    // }
 }
 
 function removeCartItem(event){
@@ -43,22 +43,22 @@ function quantityChanged(event){
     updateTotal()
 }
 
-function addToCartClicked(event){
-    var button = event.target
-    var shopItem = button.parentElement.parentElement
-    var title = shopItem.getElementsByClassName('pro-title')[0].innerHTML
-    var price = shopItem.getElementsByClassName('pro-price')[0].innerHTML
-    var image = shopItem.getElementsByClassName('pro-image')[0].src
+// function addToCartClicked(event){
+//     var button = event.target;
+//     var shopItem = button.parentElement;
+//     var title = shopItem.children[1].children[0].innerText;
+//     var price = shopItem.children[1].children[2].innerText;
+//     var image = shopItem.children[0].src;
 
-    addItemToCart(image, title, price)
-}
+//     addItemToCart(image, title, price);
+//     updateTotal();
+// }
 
-function addItemToCart(image, title, price){
-    var cartRow = document.createElement('div')
-    cartRow.innerText = title
-    var cartItem = document.getElementsByClassName('cart-content')[0]
-    cartItem.append(cartRow)
-}
+// function addItemToCart(image, title, price){
+//     var cartShop = document.createElement('div');
+    
+//     var cartItems = document.getElementsByClassName('in-container');
+// }
 
 function updateTotal(){
     var cartContent = document.getElementsByClassName('cart-content')[0];
