@@ -6,7 +6,6 @@ if (document.readyState == 'loading'){
 
 function ready(){
     var removeButton = document.getElementsByClassName('product-remove')
-    console.log(removeButton)
 
     for (var i = 0; i < removeButton.length; i++){
         var button = removeButton[i];
@@ -30,8 +29,18 @@ function ready(){
 
 function removeCartItem(event){
     var buttonClicked = event.target;
-    buttonClicked.parentElement.remove();
+    var pro = buttonClicked.parentElement;
+    pro.remove();
     updateTotal();
+
+    var storedName = localStorage.getItem('productsInCart');
+    storedName = JSON.parse(storedName);
+    console.log(storedName);
+
+    var indexToRemove = 1;
+    storedName.slice(indexToRemove, 1);
+
+    localStorage.setItem('productsInCart', JSON.stringify(storedName));
 }
 
 function quantityChanged(event){
@@ -77,6 +86,6 @@ function updateTotal(){
 
     }
     
-    document.getElementsByClassName('total-price')[0].innerHTML = total + ".000 VND"
-    document.getElementsByClassName('subtotal')[0].innerHTML = total  + ".000 VND"
+    document.getElementsByClassName('total-price')[0].innerHTML = nf.format(total) + ",000 VND"
+    document.getElementsByClassName('subtotal')[0].innerHTML = nf.format(total) + ",000 VND"
 }

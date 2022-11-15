@@ -1,34 +1,35 @@
 let carBtn = document.querySelectorAll('.cart');
+let nf = new Intl.NumberFormat('en-US');
 
 let products = [
     {
         image: '../img/products/sweater1.jpg',
         title: "Cut and Sew Pullover",
-        price: '170.000',
+        price: 170,
         inCart: 0
     },
     {
         image: '../img/products/sweater2.jpg',
         title: "Color Block Jumper Sweater",
-        price: '185.000',
+        price: 185,
         inCart: 0
     },
     {
         image: '../img/products/sweater3.jpg',
         title: "Constrast Collar Knit 2 In 1 Blouse",
-        price: '193.000',
+        price: 193,
         inCart: 0
     },
     {
         image: '../img/products/sweater4.jpg',
         title: "Casual Round Neck Sweatshirt",
-        price: '180.000',
+        price: 180,
         inCart: 0
     },
     {
         image: '../img/products/hoodie1.jpg',
         title: "Color Block Hoodie",
-        price: '165.000',
+        price: 165,
         inCart: 0
     }
 ];
@@ -87,7 +88,7 @@ const totalCost = (productCost) => {
         localStorage.setItem('totalCost', cartCost + productCost.price);
     }
     else{
-        localStorage.setItem('itemCost', productCost.price);
+        localStorage.setItem('totalCost', productCost.price);
     }
 }
 
@@ -95,31 +96,41 @@ const display = () => {
     let cartItems = localStorage.getItem('productsInCart');
     cartItems = JSON.parse(cartItems);
 
-    let productContainer = document.querySelector('.cartshop');
+    let productContainer = document.querySelector('.cart-content');
+    let checkoutContainer = document.querySelector('.total-table');
     let cartCost = localStorage.getItem('totalCost');
 
     if(cartItems && productContainer){
         productContainer.innerHTML = '';
         Object.values(cartItems).map(item => {
             productContainer.innerHTML += `
-            <h1>your cart</h1>
-            <div class="cart-content">
-                <div class="cart-content">
-                    <div class="cart-box">
-                        <img src="${item.image}" alt="">
-                        <div class="cart-product-details">
-                            <div class="product-title">${item.title}</div>
-                            <div class="product-price">${item.price}</div>
-                            <input type="number" value="${item.inCart}" class="quantity">
-                        </div>
-
-                        <i class="fa-solid fa-trash product-remove"></i>
-
-                    </div>
+            <div class="cart-box">
+                <img src="${item.image}" alt="">
+                <div class="cart-product-details">
+                    <div class="product-title">${item.title}</div>
+                    <div class="product-price">${item.price}.000 VND</div>
+                    <input type="number" value="${item.inCart}" class="quantity">
                 </div>
+
+                <i class="fa-solid fa-trash product-remove"></i>
+
             </div>
             `;
         })
+        checkoutContainer.innerHTML = `
+        <tr>
+            <td>Cart Subtotals</td>
+            <td class="subtotal">${nf.format(cartCost)},000 VND</td>
+        </tr>
+        <tr>
+            <td>Shipping</td>
+            <td>Free</td>
+        </tr>
+        <tr>
+            <td><strong>Total</strong></td>
+            <td class="total-price"><strong>${nf.format(cartCost)},000 VND</strong></td>
+        </tr>
+        `;
     }
 }
 
