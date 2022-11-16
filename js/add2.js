@@ -3,6 +3,24 @@ let nf = new Intl.NumberFormat('en-US');
 
 let products = [
     {
+        image: '../img/products/person3.jpg',
+        title: "Tie Front Waffle Knit Cardigan",
+        price: 410,
+        inCart: 0
+    },
+    {
+        image: '../img/products/person4.jpg',
+        title: "Angulu V - Neck Pullover",
+        price: 180,
+        inCart: 0
+    },
+    {
+        image: '../img/products/person1.jpg',
+        title: "Cropped Grey Blazer - High Waist Mini SKirt",
+        price: 420,
+        inCart: 0
+    },
+    {
         image: '../img/products/sweater1.jpg',
         title: "Cut and Sew Pullover",
         price: 170,
