@@ -31,6 +31,90 @@ let products = [
         title: "Color Block Hoodie",
         price: 165,
         inCart: 0
+    },
+    {
+        image: '../img/products/hoodie2.jpg',
+        title: "Rainbow Cropped Hoodie",
+        price: 160,
+        inCart: 0
+    },
+    {
+        image: '../img/products/hoodie3.jpg',
+        title: "Multi Colored Hoodie",
+        price: 270,
+        inCart: 0
+    },
+    {
+        image: '../img/products/dress3.jpg',
+        title: "Contrast Collar 2 In 1 Pullover",
+        price: 170,
+        inCart: 0
+    },
+    {
+        image: '../img/products/pants1.jpg',
+        title: "High - Waisted Cargo Pants",
+        price: 250,
+        inCart: 0
+    },
+    {
+        image: '../img/products/pants2.jpg',
+        title: "High - Waisted Denim Shorts",
+        price: 175,
+        inCart: 0
+    },
+    {
+        image: '../img/products/pants3.jpg',
+        title: "Wide - Leg Light Brown Pants",
+        price: 280,
+        inCart: 0
+    },
+    {
+        image: '../img/products/overalls.jpg',
+        title: "Pink Denim Overalls",
+        price: 290,
+        inCart: 0
+    },
+    {
+        image: '../img/products/skirt1.jpg',
+        title: "Checkered Skirt",
+        price: 250,
+        inCart: 0
+    },
+    {
+        image: '../img/products/skirt2.jpg',
+        title: "Denim Skirt",
+        price: 260,
+        inCart: 0
+    },
+    {
+        image: '../img/products/top1.jpg',
+        title: "Daisy Crop Top",
+        price: 258,
+        inCart: 0
+    },
+    {
+        image: '../img/products/suit1.jpg',
+        title: "Floral Jumpsuit",
+        price: 487,
+        inCart: 0
+    },
+    {
+        image: '../img/products/dress1.jpg',
+        title: "Royal Blue Dress",
+        price: 1100,
+        inCart: 0
+    },
+    {
+        image: '../img/products/dress2.jpg',
+        title: "Shirty Gray Vintage Dress",
+        price: 1250,
+        inCart: 0
+    },
+    {
+        image: '../img/products/coat1.jpg',
+        title: "Gucci Coat",
+        price: 1500,
+        inCart: 0
     }
 ];
 
